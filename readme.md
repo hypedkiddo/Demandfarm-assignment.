@@ -1,0 +1,1 @@
+# focus on MVP (Minimal Viable Product) first. Don’t stress over fancy UI initially — just get the flow working. You can always improve it later!
