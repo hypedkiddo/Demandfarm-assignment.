@@ -41,3 +41,37 @@ Accessible after successful login:
 | React (Vite)  | Firebase    | Firebase Auth (Google) | Firebase Firestore |
 
 ---
+
+## Installation
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [Git](https://git-scm.com/)
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/hypedkiddo/Demandfarm-assignment..git
+cd Client
+```
+### Install Dependencies
+```bash
+npm install
+```
+### Environment Variables
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_bucket_url
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
+
+
+## Start the application using npm:
+```bash
+npm run dev
+```
