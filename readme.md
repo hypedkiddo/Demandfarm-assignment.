@@ -9,7 +9,6 @@ A full-stack web application that fetches and stores real-time Bitcoin and Forex
 ### 🔐 1. User Authentication
 - Secure login system using:
   - Google Login
-  - LinkedIn Login
 - Session management to ensure secure access to user-specific dashboards.
 
 ### 📊 2. Exchange Rate Data Collection
@@ -39,6 +38,6 @@ Accessible after successful login:
 
 | Frontend      | Backend     | Authentication | Database       |
 |---------------|-------------|----------------|----------------|
-| React (Vite)  | Firebase    | Firebase Auth (Google, LinkedIn) | Firebase Firestore |
+| React (Vite)  | Firebase    | Firebase Auth (Google) | Firebase Firestore |
 
 ---
