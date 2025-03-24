@@ -10,6 +10,7 @@ import {auth} from "./firebase/firebase.js"
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css"
 
+
 function Navigation() {
   const navigate = useNavigate();
   return (
