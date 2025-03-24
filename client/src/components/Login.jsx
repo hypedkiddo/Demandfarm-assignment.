@@ -4,6 +4,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import {toast} from "react-toastify";
 import Navbar from "./Navbar"
 import Footer from "./Footer"
+import SignInwithGoogle from './SignInWithGoogle';
 
 function Login() {
     const[email,setEmail]=useState("");
@@ -69,6 +70,11 @@ function Login() {
     >
       Submit
     </button>
+
+    <div>
+    <SignInwithGoogle/>
+    </div>
+
   </form>
 </div>
   <Footer/>
