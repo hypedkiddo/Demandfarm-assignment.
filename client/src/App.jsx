@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import Login from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
 import LandingPage from "./components/LandingPage.jsx";
-import Dashboard from "./components/dashboard.jsx";
+import Dashboard from "./components/Dashboard.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {auth} from "./firebase/firebase.js"
