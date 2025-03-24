@@ -6,7 +6,8 @@ import { setDoc, doc } from "firebase/firestore";
 import googleImg from "../assets/google.png"
 
 function SignInwithGoogle() {
-  function googleLogin() {
+  function googleLogin(e) {
+    e.preventDefault();
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider).then(async (result) => {
       console.log(result);
