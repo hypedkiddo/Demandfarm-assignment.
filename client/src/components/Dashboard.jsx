@@ -5,6 +5,7 @@ import RateCard from "./RateCard"
 import axios from "axios"
 import {collection,addDoc,serverTimestamp} from "firebase/firestore"
 import {db} from "../firebase/firebase"
+import GeminiAi from "./GeminiAi" //importing Gemini analytics
 import {
   LineChart,
   Line,
@@ -178,6 +179,8 @@ const Dashboard = () => {
             ))}
           </div>
         )}
+
+       
 
         {/* Chart Section */}
         <div className="bg-white p-6 rounded-lg shadow-md mt-8">
