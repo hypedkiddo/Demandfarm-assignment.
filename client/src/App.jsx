@@ -4,6 +4,7 @@ import Login from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
 import LandingPage from "./components/LandingPage.jsx";
 import Dashboard from "./components/Dashboard.jsx";
+import Reports from "./components/Reports.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -44,6 +45,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/dashboard" element={<PrivateRoute user={user}> <Dashboard/> </PrivateRoute>} /> 
+              <Route path="/report" element={<PrivateRoute user={user}> <Reports/> </PrivateRoute>} /> 
             </Routes>
             <ToastContainer />
           </div>

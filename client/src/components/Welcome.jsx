@@ -2,8 +2,10 @@ import { Link } from "react-router-dom"
 import { auth, db } from "../firebase/firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { useState,useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Welcome = () => {
+  const navigate=useNavigate();
     const [userDetails, setUserDetails] = useState(null);
       const fetchUserData = async () => {
         auth.onAuthStateChanged(async (user) => {
@@ -43,6 +45,9 @@ const Welcome = () => {
         </div>
         <button className="btn btn-primary" onClick={handleLogout}>
             Logout
+        </button>
+        <button className="btn btn-primary" onClick={()=>{navigate("/report")}}>
+            Report
         </button>
         
       </div>
