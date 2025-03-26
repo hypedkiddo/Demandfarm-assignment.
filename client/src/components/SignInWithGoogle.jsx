@@ -24,7 +24,8 @@ function SignInwithGoogle() {
         });
         window.location.href = "/dashboard";
       }
-    });
+    }  
+);
   }
   return (
     <div>
