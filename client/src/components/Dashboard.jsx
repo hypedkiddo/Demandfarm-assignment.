@@ -62,7 +62,7 @@ const Dashboard = () => {
     const fetchRate = async () => {
       try {
         const result = await axios.get(
-          "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,eur,inr,gbp,cad,jpy"
+          "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,eur,inr,gbp,cad,jpy" //Public api
         )
         const bitcoinRates=result.data.bitcoin
         setRates({ bitcoin: result.data.bitcoin })
@@ -89,7 +89,7 @@ const Dashboard = () => {
     const fetchHistorical = async () => {
       try {
         const response = await axios.get(
-          `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=7&interval=daily`
+          `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=7&interval=daily`//public api
         )
         const pricePoints = response.data.prices.map(([timestamp, value]) => {
           const date = new Date(timestamp).toLocaleDateString()
