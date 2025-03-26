@@ -2,8 +2,9 @@ import { useState, useEffect } from "react"
 import Welcome from "./Welcome"
 import Footer from "./Footer"
 import RateCard from "./RateCard"
-import CurrencyToggle from "./CurrencyToggle"
 import axios from "axios"
+import {collection,addDoc,serverTimestamp} from "firebase/firestore"
+import {db} from "../firebase/firebase"
 import {
   LineChart,
   Line,
@@ -63,9 +64,15 @@ const Dashboard = () => {
         const result = await axios.get(
           "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,eur,inr,gbp,cad,jpy"
         )
+        const bitcoinRates=result.data.bitcoin
         setRates({ bitcoin: result.data.bitcoin })
         setLastUpdated(new Date().toLocaleTimeString())
         setLoading(false)
+        // Storing data into firestore
+        await addDoc(collection(db,"bitcoinPrices"),{
+          timestamp:serverTimestamp(),
+          ...bitcoinRates
+        })
       } catch (error) {
         console.log("Error fetching rates:", error)
         setLoading(false)

@@ -25,10 +25,11 @@ import "./App.css"
 function App() {
   const [user, setUser] = useState();
   useEffect(() => {
-    auth.onAuthStateChanged((user) => {
+   const unsubscribe= auth.onAuthStateChanged((user) => {
       setUser(user);
     });
-  });
+    return () => unsubscribe(); // cleanup
+  },[]);
   return (
     <Router>
       {/* <Navigation/> */}
@@ -39,7 +40,6 @@ function App() {
               <Route
                 path="/"
                 element={<LandingPage/>}
-                
               />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />

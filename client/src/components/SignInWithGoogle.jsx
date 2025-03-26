@@ -3,9 +3,11 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth, db } from "../firebase/firebase";
 import { toast } from "react-toastify";
 import { setDoc, doc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 import googleImg from "../assets/google.png"
 
 function SignInwithGoogle() {
+  const navigate=useNavigate()
   function googleLogin(e) {
     e.preventDefault();
     const provider = new GoogleAuthProvider();
@@ -22,7 +24,7 @@ function SignInwithGoogle() {
         toast.success("User logged in Successfully", {
           position: "top-center",
         });
-        window.location.href = "/dashboard";
+        navigate("/dashboard")
       }
     }  
 );

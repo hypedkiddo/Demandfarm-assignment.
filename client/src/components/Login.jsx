@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { auth } from '../firebase/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 import {toast} from "react-toastify";
 import Navbar from "./Navbar"
 import Footer from "./Footer"
@@ -9,13 +10,14 @@ import SignInwithGoogle from './SignInWithGoogle';
 function Login() {
     const[email,setEmail]=useState("");
     const [password, setPassword] = useState("");
-
+    const navigate=useNavigate();
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
         await signInWithEmailAndPassword(auth, email, password);
         console.log("User logged in Successfully");
-         window.location.href = "/dashboard"
+        
+        navigate("/dashboard");
         toast.success("User logged in Successfully", {
           position: "top-center",
         });
