@@ -129,7 +129,7 @@ const Dashboard = () => {
       <main className="flex-grow container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-6">Dashboard</h1>
 
-        {/* Time Range Selector */}
+        {/* Time Range Selector
         <div className="bg-white p-6 rounded-lg shadow-md mb-8">
           <h2 className="text-xl font-semibold text-gray-700 mb-4">Select Time Range</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -158,7 +158,7 @@ const Dashboard = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Rate Cards */}
         <h2 className="text-xl font-semibold text-gray-700 mb-4">Current Bitcoin Rates</h2>
